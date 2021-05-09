@@ -1,0 +1,96 @@
+/* fonts */
+
+@font-face {
+    font-family: "heroLight";
+    src: url("fonts/Hero-Light.ttf") format("truetype");
+}
+
+/* elements */
+
+body {
+    background-image: url("background.png");
+    margin: 0px;
+    background-color: rgb(40,40,40);
+}
+
+/* custom elements */
+
+#notification {
+    font-family: "heroLight";
+    color :rgba(255, 255, 255, 0.664);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+}
+
+#glow {
+    background-color :rgba(255, 255, 255);
+    opacity: 0.025;
+
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 0px;
+
+    animation-duration: 7s;
+    animation-name: glow_in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icons {
+    width:whatever;
+    margin:0 auto;
+}
+
+/* modifiers */
+
+.icon {
+    width: 32px;
+    height: auto;
+    opacity: 1;
+
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.fakeicon {
+    width: 32px;
+    height: auto;
+    opacity: 1;
+
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* animations */
+
+@keyframes glow_in {
+    from {
+        opacity: 0.025;
+    }
+
+    to {
+        opacity: 0.1;
+    }
+}
+
+@keyframes dscglow_in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes idle { 100% {} }
